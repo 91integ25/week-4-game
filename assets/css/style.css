@@ -1,0 +1,14 @@
+body{
+	background-image: url(../images/caves.jpg);
+	background-size: cover;
+}
+li {
+	list-style: none;
+}
+.gem{
+	height: 100px;
+	width: 100px;
+}
+.jumbotron{
+	opacity: 0.8;
+}
