@@ -22,53 +22,28 @@ $(document).ready(function(){
    $(".numberToMatch").html(randomNum);
 
 
-	$(".gem1").on("click", function(){
+function outputScore(element, index){	
+
+	$(element).on("click", function(){
 //take the value and push it to total score
 
-	var gem1 = gemArray[0];
+	var gem = gemArray[index];
 	
-	total = total + gem1;
+	total = total + gem;
 			
 	$(".score").html(total);
 	
 	compScore();
 	
 });
-	$(".gem2").on("click", function(){
-//take the value and push it to total score
-	
-	var gem2 = gemArray[1];
-	
-	total = total + gem2;
-			
-	$(".score").html(total);
-	
-	compScore();
-	
-});
-	$(".gem3").on("click", function(){
-//take the value and push it to total score
-		
-		var gem3 = gemArray[2];
-		
-		total = total + gem3;
-			
-		$(".score").html(total);
-		
-		compScore();
+}
 
-});
-	$(".gem4").on("click", function(){
-//take the value and push it to total score
-		var gem4 = gemArray[3];
-		
-		total = total + gem4;	
-			
-		$(".score").html(total);
-		
-		compScore();
-			
-});
+outputScore(".gem1", 0);
+outputScore(".gem2", 1);
+outputScore(".gem3", 2);
+outputScore(".gem4", 3);
+
+
 	function compScore() {
 		if(randomNum === total) {
 			
