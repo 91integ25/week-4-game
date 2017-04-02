@@ -4,9 +4,11 @@ var win = 0;
 var randomNum = Math.floor(Math.random() * (102)+ 19);
 var gemArray = [];
 var total = 0;
-
+// function to tell the DOM to wait before running this code until everything is loaded
 $(document).ready(function(){
-	
+
+	// generating a random value for the gems
+
 	function gemFunc() {
 
 		for (var i = 0; i < 4; i++){
@@ -17,10 +19,13 @@ $(document).ready(function(){
 	}	
 	}
 
+	// calling random value function
+	
 	gemFunc();
 
    $(".numberToMatch").html(randomNum);
 
+// grabbing element Id to display value to the DOM on click
 
 function outputScore(element, index){	
 
@@ -37,13 +42,13 @@ function outputScore(element, index){
 	
 });
 }
-
+// calling outputScore function with all parameters
 outputScore(".gem1", 0);
 outputScore(".gem2", 1);
 outputScore(".gem3", 2);
 outputScore(".gem4", 3);
 
-
+// function checking if the user has won or not
 	function compScore() {
 		if(randomNum === total) {
 			
@@ -67,7 +72,7 @@ outputScore(".gem4", 3);
 			restart();
 
 		}
-
+		// function resets all variables and creates a new random word
 		function restart() {
 			
 			gemArray = [];

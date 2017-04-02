@@ -1,6 +1,9 @@
 body{
 	background-image: url(../images/caves.jpg);
-	background-size: cover;
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 li {
 	list-style: none;
@@ -10,7 +13,7 @@ li {
 	justify-content: center;
 }
 .jumbotron{
-	opacity: 0.8;
+	background-color:rgba(0,0,0,0.5);
 }
 img {
 	height: 20%;
