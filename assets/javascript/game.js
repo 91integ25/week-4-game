@@ -1,12 +1,12 @@
+
+// function to tell the script to wait until DOM is loaded before running this code
+$(document).ready(function(){
 //Global Varible 
 var loss = 0;
 var win = 0;
 var randomNum = Math.floor(Math.random() * (102)+ 19);
 var gemArray = [];
 var total = 0;
-// function to tell the DOM to wait before running this code until everything is loaded
-$(document).ready(function(){
-
 	// generating a random value for the gems
 
 	function gemFunc() {
